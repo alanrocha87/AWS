@@ -1,0 +1,22 @@
+import json
+import boto3
+
+def lambda_handler(event, context):
+    
+    #Var
+    instance_id="i-032f5f6ddfc71245b"
+    image_name="Mifirstimagewithlambda"
+    image_Description="Just a name"
+    
+    #con
+    client = boto3.client('ec2')
+    
+    response = client.create_image(
+        Description=image_Description,
+        InstanceId=instance_id,
+        Name=image_name,
+        NoReboot=False
+        
+)
+        
+    print(response) 
