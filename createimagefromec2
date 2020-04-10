@@ -18,5 +18,6 @@ def lambda_handler(event, context):
         NoReboot=False
         
 )
-        
-    print(response) 
+ print(response)
+
+    #make necessary changes
